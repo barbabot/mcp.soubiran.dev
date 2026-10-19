@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@cloudflare/workers-oauth-provider':
+        specifier: 1.2.3
+        version: 1.2.3
+      jose:
+        specifier: 6.2.12
+        version: 6.2.12
       '@modelcontextprotocol/sdk':
         specifier: 1.32.1
         version: 1.32.1(@cfworker/json-schema@4.1.1)(zod@4.6.7)
@@ -59,6 +65,12 @@ importers:
         version: 4.151.1(@types/node@24.19.2)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
 
 packages:
+
+  '@cloudflare/workers-oauth-provider@1.2.3':
+    resolution: {integrity: sha512-40eGeA3DnTOEl2ijHYY5Z9yNIf0fdjgomoaA6GHPo4FyKQw0oXPuy4GVjTE/uNfS/MoFAvzsuVBRwTPKUki4hA==}
+
+  jose@6.2.12:
+    resolution: {integrity: sha512-9NiFmJEex0sy2Dk58j2UGBSHgUs2ypF9eZSu4L6vjOX3Dp96Sw1F3uL+H+D1sx02jZZdzUT0HgvCy59CuvXcWw==}
 
   '@antfu/eslint-config@5.4.1':
     resolution: {integrity: sha512-x7BiNkxJRlXXs8tIvg0CgMuNo5IZVWkGLMJotCtCtzWUHW78Pmm8PvtXhvLBbTc8683GGBK616MMztWLh4RNjA==}
@@ -3376,6 +3388,10 @@ packages:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
 
 snapshots:
+
+  '@cloudflare/workers-oauth-provider@1.2.3': {}
+
+  jose@6.2.12: {}
 
   '@antfu/eslint-config@5.4.1(@vue/compiler-sfc@3.5.22)(eslint@9.39.5(jiti@2.6.1))(typescript@5.9.3)(vitest@4.1.11(@opentelemetry/api@1.9.1)(@types/node@24.19.2)(vite@8.2.1(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.6.1)(yaml@2.9.0)))':
     dependencies:

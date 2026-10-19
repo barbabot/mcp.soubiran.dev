@@ -6,6 +6,7 @@ export default defineConfig({
     compatibilityDate: '2026-03-27',
     compatibilityFlags: [
       'nodejs_compat',
+      'global_fetch_strictly_public',
     ],
     entrypoint: 'src/index.ts',
     observability: {
@@ -14,9 +15,7 @@ export default defineConfig({
         enabled: true,
       },
       traces: {
-        enabled: true,
-        persist: true,
-        headSamplingRate: 1,
+        enabled: false,
       },
       logs: {
         enabled: true,
@@ -39,6 +38,11 @@ export default defineConfig({
       TOPOLOGY_URL: bindings.text('https://beta.soubiran.dev/infra/topology.json'),
       TOPOLOGY_LOADER: bindings.workerLoader(),
       SENTRY_DSN: bindings.secret(),
+      OAUTH_KV: bindings.kv(),
+      PASSPORT_JWKS_URL: bindings.text('https://api.soubiran.dev/.well-known/jwks.json'),
+      PASSPORT_SERVICE_CLIENT_ID: bindings.secret(),
+      PASSPORT_INTERACTIVE_CLIENT_ID: bindings.secret(),
+      PASSPORT_INTERACTIVE_CLIENT_SECRET: bindings.secret(),
     },
   },
 })
