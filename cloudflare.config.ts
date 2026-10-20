@@ -8,6 +8,8 @@ export default defineConfig({
       'nodejs_compat',
     ],
     entrypoint: 'src/index.ts',
+    workersDev: false,
+    previewUrls: false,
     observability: {
       enabled: true,
       issues: {
@@ -38,7 +40,6 @@ export default defineConfig({
       TOPOLOGY_LOADER: bindings.workerLoader(),
       SENTRY_DSN: bindings.secret(),
       PASSPORT_JWKS_URL: bindings.text('https://api.soubiran.dev/.well-known/jwks.json'),
-      PASSPORT_SERVICE_CLIENT_ID: bindings.secret(),
     },
   },
 })
